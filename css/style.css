@@ -1,0 +1,102 @@
+body {
+    background-color: #e9d5e4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.Título {
+    color: #362490;
+    font-family: 'Bree Serif', serif;
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    margin-bottom: 70px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-top: 40px;
+    flex-grow: 0;
+    text-align: center;
+}
+
+.signoimg {
+    border-radius: 50%;
+    width: 60%;
+    height: 60%;
+    margin: auto;
+    margin-top: 5px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.alfajorimg {
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    /* width: 100%; */
+    width: 80%;
+}
+
+#Contenedor {
+    width: 550px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin: 50px auto;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    color: #e9d5e4;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.Signo {
+    width: 150px;
+    background-color: #6c46ed;
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    position: relative;
+    perspective: 1000px;
+}
+
+.transicion {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+    transform-style: preserve-3d;
+    transition: all 0.5s linear;
+}
+
+.cara-delantera {
+    backface-visibility: hidden;
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+
+.cara-michi {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.Signo:hover {
+    background-color: #4e35c7;
+}
+
+.Signo.SignoActivo .transicion {
+    transform: rotateY(180deg);
+}
+
+.Signo:active {
+    box-shadow: 0px 0px 20px rgb(226, 230, 5);
+}
