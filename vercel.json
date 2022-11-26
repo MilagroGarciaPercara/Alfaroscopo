@@ -1,8 +1,8 @@
 {
-    "redirects": [
+    "rewrites": [
         {
-            "source": "/",
-            "destination": "/Alfaroscopo.html"
+            "source": "/(.*)",
+            "destination": "/Alfaróscopo.html"
         }
     ],
     "outputDirectory": "."
